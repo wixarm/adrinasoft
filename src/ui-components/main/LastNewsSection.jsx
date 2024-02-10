@@ -17,9 +17,9 @@ const LastNewsSection = () => {
       {/* Card 1 */}
       <motion.div
         whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-        className="w-full md:w-96"
+        className="w-full md:w-80"
       >
-        <Card className="bluehover w-full md:w-96 h-full">
+        <Card className="bluehover w-full md:w-80 h-full">
           <CardHeader color="blue-gray" className="relative h-56">
             <img
               src={g1}
@@ -42,9 +42,9 @@ const LastNewsSection = () => {
       {/* Card 2 */}
       <motion.div
         whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-        className="w-full md:w-96"
+        className="w-full md:w-80"
       >
-        <Card className="bluehover w-full md:w-96 h-full">
+        <Card className="bluehover w-full md:w-80 h-full">
           <CardHeader color="blue-gray" className="relative h-56">
             <img
               src={g2}
@@ -67,9 +67,9 @@ const LastNewsSection = () => {
       {/* Card 3 */}
       <motion.div
         whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-        className="w-full md:w-96"
+        className="w-full md:w-80"
       >
-        <Card className="bluehover w-full md:w-96 h-full">
+        <Card className="bluehover w-full md:w-80 h-full">
           <CardHeader color="blue-gray" className="relative h-56">
             <img
               src={g3}
@@ -93,9 +93,9 @@ const LastNewsSection = () => {
       {/* Card 4 */}
       <motion.div
         whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-        className="w-full md:w-96"
+        className="w-full md:w-80"
       >
-        <Card className="bluehover w-full md:w-96 h-full">
+        <Card className="bluehover w-full md:w-80 h-full">
           <CardHeader color="blue-gray" className="relative h-56">
             <img
               src={g4}

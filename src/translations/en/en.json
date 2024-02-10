@@ -1,0 +1,15 @@
+{
+  "navbar": {
+    "blog": "blog",
+    "steam": "steam",
+    "account": "account"
+  },
+  "carousel": {
+    "s1title": "Welcome to Adrina: Where Imagination Fuels Innovation",
+    "s1text": "Step into the realm of Adrina, where creativity knows no bounds and gaming is elevated to an art form.",
+    "s2title": "Crafting Digital Adventures Beyond Boundaries",
+    "s2text": "Embark on a journey with Adrina, where we transcend the ordinary to redefine the gaming landscape.",
+    "s3title": "Where Passion Meets Play",
+    "s3text": "Discover the heart and soul of gaming with Adrina, where our unwavering passion for play drives everything we do."
+  }
+}

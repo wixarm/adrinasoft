@@ -5,6 +5,8 @@ import {
   Typography,
   MenuItem,
   IconButton,
+  ButtonGroup,
+  Button,
 } from "@material-tailwind/react";
 import {
   CubeTransparentIcon,
@@ -12,24 +14,35 @@ import {
   Square3Stack3DIcon,
   Bars2Icon,
 } from "@heroicons/react/24/solid";
+import str, { Strings } from "../translations/localization";
 
 const navListItems = [
   {
-    label: "Blog",
+    label: str.navbar.blog,
     icon: Square3Stack3DIcon,
   },
   {
-    label: "Steam",
+    label: str.navbar.steam,
     icon: CubeTransparentIcon,
   },
   {
-    label: "Account",
+    label: str.navbar.account,
     icon: UserCircleIcon,
   },
 ];
 function NavList() {
+  const handleChange = (e) => {
+    const newLanguage = e.target.value;
+    Strings.setLanguage(newLanguage);
+    localStorage.setItem("preferredLanguage", newLanguage);
+    window.location.reload();
+  };
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+      <ButtonGroup size="sm" onClick={handleChange}>
+        <Button value="fa">fa</Button>
+        <Button value="en">en</Button>
+      </ButtonGroup>
       {navListItems.map(({ label, icon }) => (
         <Typography
           key={label}
@@ -89,6 +102,7 @@ export function AppNavbar() {
           <Bars2Icon className="h-6 w-6" />
         </IconButton>
       </div>
+
       <MobileNav open={isNavOpen}>
         <NavList />
       </MobileNav>
