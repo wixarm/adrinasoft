@@ -1,34 +1,34 @@
 import React from "react";
-import img1 from "../../assets/Img/s1.jpg";
-import img2 from "../../assets/Img/s2.jpeg";
+import img1 from "../../assets/Img/games/g1.jpg";
+import img2 from "../../assets/Img/games/g2.jpg";
+import img3 from "../../assets/Img/games/g3.jpg";
+import img4 from "../../assets/Img/games/g4.jpg";
+import img5 from "../../assets/Img/games/g5.jpg";
+import img6 from "../../assets/Img/games/g6.jpg";
 
 export function GridGallery() {
   const data = [
     {
-      imgelink:
-        "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      imgelink: img1,
     },
     {
-      imgelink:
-        "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      imgelink: img2,
     },
     {
-      imgelink:
-        "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+      imgelink: img3,
     },
     {
-      imgelink:
-        "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+      imgelink: img4,
     },
     {
-      imgelink:
-        "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+      imgelink: img5,
+    },
+    {
+      imgelink: img6,
     },
   ];
 
-  const [active, setActive] = React.useState(
-    "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-  );
+  const [active, setActive] = React.useState(img1);
 
   return (
     <div className="grid gap-4 ">
@@ -39,9 +39,9 @@ export function GridGallery() {
           alt=""
         />
       </div>
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-6">
         {data.map(({ imgelink }, index) => (
-          <div key={index} className="content-center mx-auto bluehover">
+          <div key={index} className="mx-auto bluehover">
             <img
               onClick={() => setActive(imgelink)}
               src={imgelink}
