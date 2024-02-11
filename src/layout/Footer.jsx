@@ -1,5 +1,5 @@
 import { Typography } from "@material-tailwind/react";
-import str from "../../translations/localization";
+import str from "../translations/localization";
 
 export function AppFooter() {
   return (

@@ -17,7 +17,7 @@ const LastGamesSection = () => {
   return (
     <div
       dir={preferredLanguage === "fa" ? "rtl" : "ltr"}
-      className="flex flex-wrap justify-center items-center gap-8 mb-8"
+      className="flex flex-wrap justify-center items-center gap-8 "
     >
       {/* Card 1 */}
       <motion.div
