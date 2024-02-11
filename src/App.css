@@ -3,10 +3,7 @@
   transition: filter 300ms;
 }
 .bluehover:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.bluehover.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #cc0a95aa);
 }
 
 html {

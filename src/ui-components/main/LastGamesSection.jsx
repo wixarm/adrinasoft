@@ -11,7 +11,7 @@ import g2 from "../../assets/Img/g2.jpg";
 import g3 from "../../assets/Img/g3.jpg";
 import g4 from "../../assets/Img/g4.jpg";
 
-const LastNewsSection = () => {
+const LastGamesSection = () => {
   return (
     <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
       {/* Card 1 */}
@@ -83,8 +83,7 @@ const LastNewsSection = () => {
             </Typography>
             <Typography>
               Command your own fleet of starships in this expansive space
-              strategy game set in a distant galaxy teeming with rival factions
-              and alien civilizations.
+              strategy game set in a distant galaxy teeming with rival factions.
             </Typography>
           </CardBody>
         </Card>
@@ -118,4 +117,4 @@ const LastNewsSection = () => {
   );
 };
 
-export default LastNewsSection;
+export default LastGamesSection;

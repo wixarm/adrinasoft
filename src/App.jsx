@@ -17,12 +17,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const preferredLanguage = localStorage.getItem("preferredLanguage") || "en";
   useEffect(() => {
-    const preferredLanguage = localStorage.getItem("preferredLanguage") || "en";
     if (preferredLanguage === "fa") {
       document.documentElement.style.fontFamily = "iranyekan";
     }
-  }, []);
+  }, [preferredLanguage]);
 
   return (
     <div className="overflow-x-hidden z-0">

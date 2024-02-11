@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import str from "../../translations/localization";
 
 export function AppFooter() {
   return (
@@ -17,7 +18,7 @@ export function AppFooter() {
               color="blue-gray"
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
             >
-              About Us
+              {str.footer.about}
             </Typography>
           </li>
           <li>
@@ -27,13 +28,19 @@ export function AppFooter() {
               color="blue-gray"
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
             >
-              Contact Us
+              {str.footer.contact}
             </Typography>
           </li>
         </ul>
       </div>
       <hr className="my-8 border-blue-gray-50" />
-      <Typography color="blue-gray" className="text-center font-normal">
+      <Typography
+        color="blue-gray"
+        className="text-center font-normal"
+        style={{
+          fontFamily: "sans-serif",
+        }}
+      >
         &copy; 2024 Adrina
       </Typography>
     </footer>

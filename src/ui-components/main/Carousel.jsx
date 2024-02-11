@@ -2,8 +2,10 @@ import s1 from "../../assets/Img/s1.jpg";
 import s2 from "../../assets/Img/s2.jpeg";
 import s3 from "../../assets/Img/s3.jpg";
 import { Carousel, Typography } from "@material-tailwind/react";
+import str from "../../translations/localization";
 
 const AppCarousel = () => {
+  const preferredLanguage = localStorage.getItem("preferredLanguage") || "en";
   return (
     <Carousel className="" loop autoplay>
       <div className="relative h-dvh w-full">
@@ -15,15 +17,15 @@ const AppCarousel = () => {
               color="white"
               className="mb-4 text-2xl md:text-3xl lg:text-4xl"
             >
-              Welcome to Adrina: Where Imagination Fuels Innovation
+              {str.carousel.s1title}
             </Typography>
             <Typography
+              dir={preferredLanguage === "fa" ? "rtl" : "ltr"}
               variant="lead"
               color="white"
               className="mb-8 text-base md:text-lg lg:text-xl"
             >
-              Step into the realm of Adrina, where creativity knows no bounds
-              and gaming is elevated to an art form.
+              {str.carousel.s1text}
             </Typography>
           </div>
         </div>
@@ -37,15 +39,15 @@ const AppCarousel = () => {
               color="white"
               className="mb-4 text-2xl md:text-3xl lg:text-4xl"
             >
-              Crafting Digital Adventures Beyond Boundaries
+              {str.carousel.s2title}
             </Typography>
             <Typography
+              dir={preferredLanguage === "fa" ? "rtl" : "ltr"}
               variant="lead"
               color="white"
               className="mb-8 text-base md:text-lg lg:text-xl"
             >
-              Embark on a journey with Adrina, where we transcend the ordinary
-              to redefine the gaming landscape.
+              {str.carousel.s2text}
             </Typography>
           </div>
         </div>
@@ -59,15 +61,15 @@ const AppCarousel = () => {
               color="white"
               className="mb-4 text-2xl md:text-3xl lg:text-4xl"
             >
-              Where Passion Meets Play
+              {str.carousel.s3title}
             </Typography>
             <Typography
+              dir={preferredLanguage === "fa" ? "rtl" : "ltr"}
               variant="lead"
               color="white"
               className="mb-8 text-base md:text-lg lg:text-xl"
             >
-              Discover the heart and soul of gaming with Adrina, where our
-              unwavering passion for play drives everything we do.
+              {str.carousel.s3text}
             </Typography>
           </div>
         </div>

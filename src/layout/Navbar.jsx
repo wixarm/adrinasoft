@@ -78,7 +78,7 @@ export function AppNavbar() {
     <Navbar
       fullWidth
       className={`mx-auto p-2 lg:pl-6 w-full z-10 absolute ${
-        window.location.pathname === "/" ? "bg-transparent" : "bg-blue-900"
+        window.location.pathname === "/" ? "bg-transparent" : "bg-gray-900"
       } overflow-hidden`}
     >
       <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
