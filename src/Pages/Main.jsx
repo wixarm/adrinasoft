@@ -2,7 +2,7 @@ import AppCarousel from "../ui-components/main/Carousel";
 import { AppFooter } from "../ui-components/main/Footer";
 import LastGamesSection from "../ui-components/main/LastGamesSection";
 
-const Dashboard = () => {
+const Main = () => {
   const preferredLanguage = localStorage.getItem("preferredLanguage") || "en";
 
   return (
@@ -27,4 +27,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Main;

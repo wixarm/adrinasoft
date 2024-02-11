@@ -15,5 +15,12 @@
   "footer": {
     "about": "About Us",
     "contact": "Contact Us"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "input1": "Name",
+    "input2": "Email Address",
+    "input3": "Message",
+    "send": "Submit"
   }
 }

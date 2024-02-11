@@ -12,8 +12,13 @@ import g3 from "../../assets/Img/g3.jpg";
 import g4 from "../../assets/Img/g4.jpg";
 
 const LastGamesSection = () => {
+  const preferredLanguage = localStorage.getItem("preferredLanguage") || "en";
+
   return (
-    <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
+    <div
+      dir={preferredLanguage === "fa" ? "rtl" : "ltr"}
+      className="flex flex-wrap justify-center items-center gap-8 mb-8"
+    >
       {/* Card 1 */}
       <motion.div
         whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}

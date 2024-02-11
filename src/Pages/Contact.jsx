@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import str from "../translations/localization";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -16,9 +17,13 @@ const ContactPage = () => {
     e.preventDefault();
     console.log(formData);
   };
+  const preferredLanguage = localStorage.getItem("preferredLanguage") || "en";
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div
+      dir={preferredLanguage === "fa" ? "rtl" : "ltr"}
+      className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8"
+    >
       <motion.div
         initial={{ scale: 0.95, opacity: 0.5 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -27,7 +32,7 @@ const ContactPage = () => {
       >
         <div className="px-6 py-8">
           <h2 className="text-center text-3xl font-extrabold text-gray-900">
-            Contact Us
+            {str.contact.title}
           </h2>
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <input type="hidden" name="remember" value="true" />
@@ -38,7 +43,7 @@ const ContactPage = () => {
                 className="rounded-md"
               >
                 <label htmlFor="name" className="sr-only">
-                  Name
+                  {str.contact.input1}
                 </label>
                 <input
                   id="name"
@@ -47,7 +52,7 @@ const ContactPage = () => {
                   autoComplete="name"
                   required
                   className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Name"
+                  placeholder={str.contact.input1}
                   value={formData.name}
                   onChange={handleChange}
                 />
@@ -58,7 +63,7 @@ const ContactPage = () => {
                 className="rounded-md"
               >
                 <label htmlFor="email" className="sr-only">
-                  Email address
+                  {str.contact.input2}
                 </label>
                 <input
                   id="email"
@@ -67,7 +72,7 @@ const ContactPage = () => {
                   autoComplete="email"
                   required
                   className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Email address"
+                  placeholder={str.contact.input2}
                   value={formData.email}
                   onChange={handleChange}
                 />
@@ -78,7 +83,7 @@ const ContactPage = () => {
                 className="rounded-md"
               >
                 <label htmlFor="message" className="sr-only">
-                  Message
+                  {str.contact.input3}
                 </label>
                 <textarea
                   id="message"
@@ -86,7 +91,7 @@ const ContactPage = () => {
                   rows="4"
                   required
                   className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Message"
+                  placeholder={str.contact.input3}
                   value={formData.message}
                   onChange={handleChange}
                 ></textarea>
@@ -100,7 +105,7 @@ const ContactPage = () => {
                 whileTap={{ scale: 1 }}
                 className="w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Submit
+                {str.contact.send}
               </motion.button>
             </div>
           </form>
